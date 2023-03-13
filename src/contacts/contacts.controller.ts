@@ -23,7 +23,6 @@ export class ContactsController {
     @Body() contactData: contactcolumn,
   ): Promise<any> {
     contactData.id = Number(id);
-    console.log('Update #' + contactData.id);
     return this.contactsService.update(contactData);
   }
 

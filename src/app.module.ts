@@ -15,7 +15,7 @@ import { ContactsModule } from './contacts/contacts.module';
       password: 'Neebani@259955',
       database: 'contactDB',
       entities: [contactcolumn],
-      synchronize: true,
+      synchronize: false,
     }),
     ContactsModule,
   ],
