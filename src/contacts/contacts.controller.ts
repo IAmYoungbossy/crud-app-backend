@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { contactcolumn } from './contact.entity';
+import { contactColumn } from './contact.entity';
 import { ContactsService } from './contacts.service';
 import { Post, Put, Delete, Body, Param } from '@nestjs/common';
 
@@ -8,19 +8,19 @@ export class ContactsController {
   constructor(private contactsService: ContactsService) {}
 
   @Get()
-  index(): Promise<contactcolumn[]> {
+  index(): Promise<contactColumn[]> {
     return this.contactsService.findAll();
   }
 
   @Post('create')
-  async create(@Body() contactData: contactcolumn): Promise<any> {
+  async create(@Body() contactData: contactColumn): Promise<any> {
     return this.contactsService.create(contactData);
   }
 
   @Put(':id/update')
   async update(
     @Param('id') id,
-    @Body() contactData: contactcolumn,
+    @Body() contactData: contactColumn,
   ): Promise<any> {
     contactData.id = Number(id);
     return this.contactsService.update(contactData);

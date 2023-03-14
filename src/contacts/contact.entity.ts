@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class contactcolumn {
+export class contactColumn {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -16,9 +16,6 @@ export class contactcolumn {
 
   @Column()
   Email: string;
-
-  @Column()
-  Phone: string;
 
   @Column()
   City: string;

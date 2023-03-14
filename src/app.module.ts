@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { contactcolumn } from './contacts/contact.entity';
+import { contactColumn } from './contacts/contact.entity';
 import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
@@ -12,10 +12,10 @@ import { ContactsModule } from './contacts/contacts.module';
       host: 'localhost',
       port: 3306,
       username: 'mysql',
-      password: 'Neebani@259955',
+      password: 'password',
       database: 'contactDB',
-      entities: [contactcolumn],
-      synchronize: false,
+      entities: [contactColumn],
+      synchronize: true,
     }),
     ContactsModule,
   ],
