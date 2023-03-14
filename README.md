@@ -1,10 +1,10 @@
 # NestJs, MySQL, TypeORM, and TypeScript Assessment
 
-This project showcases how to use NestJS framework and TypeORM to store and retrieve data in a MySQL database.
+This technical report showcases the use of NestJS framework and TypeORM for efficient data storage and retrieval in a MySQL database. The project is aimed at providing a comprehensive overview of the techniques and technologies involved in implementing a backend system using NestJS, MySQL, TypeORM, and TypeScript.
 
 ![](https://cdn-images-1.medium.com/max/800/1*zeOv4blDpgcoqTLUvfmbXQ.png)
 
-Before running the sample application, ensure that the MySQL connection is established with the correct data. Update the 'username', 'password' and 'database' values in the object passed to the forRoot method in app.module.ts file to match your MySQL server values, otherwise the application will not run
+To begin, it is essential to establish a connection with the MySQL server and verify the correctness of the connection details. The connection details can be modified in the object passed to the forRoot method in the app.module.ts file, including the 'username', 'password' and 'database' values. Failure to provide accurate connection details will lead to the inability to run the application. summarily, make sure your MySQL server password, username, and database values correspond to the ones in the object passed to the forRoot method.
 
 ```
 {
@@ -19,10 +19,22 @@ Before running the sample application, ensure that the MySQL connection is estab
 }
 ```
 
-To proceed, install all the dependencies of the application by running the command 'npm install'. Once the dependencies are installed, run the application by executing the below command.
+The application's dependencies can be installed by executing the following command:
+
+```
+npm install
+```
+
+After installing the dependencies, execute the command below to run the application:
 
 ```
 npm run start:dev
 ```
 
-Note that once you've used the application to create a particular table (in our case that'll be contactColumn table) in the contactDb database, if you want to access the same table again after a disconnection, just set the sychronize property in the object passed to the forRoot method value to false, else it'll try to create same table again which already exist.
+It is important to note that once the application is used to create a specific table (in this case, the contactColumn table) in the contactDb database, if there is a disconnection, setting the synchronize property value to false in the object passed to the forRoot method will enable access to the same table without attempting to create it again.
+
+Upon completion of the above steps, users can interact with their MySQL database using a client-side application.
+
+Furthermore, this assessment includes the development of a client-side application [Crud App Front-end](https://github.com/IAmYoungbossy/crud-app-frontend) to consume the API created from this project. The front-end application was built using ReactJS, TypeScript, Redux for state management, Styled Component for styling, and Axios for API requests.
+
+In summary, this project provides a robust solution for implementing efficient data storage and retrieval in a MySQL database using NestJS, MySQL, TypeORM, and TypeScript.
